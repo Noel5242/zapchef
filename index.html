@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZapChef - Seu Assistente Culinário Inteligente no WhatsApp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+        header {
+            background: #fff;
+            color: #333;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #2ecc71; /* Verde para um toque culinário/saudável */
+        }
+        header nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+        header nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background: #2ecc71 url('placeholder_hero_background.jpg') no-repeat center center/cover; /* Sugestão: imagem de fundo com tema de cozinha moderna e clara */
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #e67e22; /* Laranja para destaque */
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #d35400;
+        }
+        section {
+            padding: 40px 0;
+            text-align: center;
+        }
+        section h3 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .features-grid, .benefits-grid, .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .feature-item, .benefit-item, .plan-item {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .feature-item i, .benefit-item i { /* Para ícones, se usar FontAwesome ou similar */
+            font-size: 2em;
+            color: #2ecc71;
+            margin-bottom: 10px;
+            display: block;
+            text-align: center;
+        }
+        .feature-item h4, .benefit-item h4, .plan-item h4 {
+            font-size: 1.3em;
+            color: #2ecc71;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .plan-item {
+            text-align: center;
+        }
+        .plan-item .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #e67e22;
+            margin: 15px 0;
+        }
+        .plan-item .price span {
+            font-size: 0.5em;
+            font-weight: normal;
+            color: #777;
+        }
+        .plan-item ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .plan-item ul li {
+            margin-bottom: 8px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+        /* Responsividade */
+        @media(max-width: 768px) {
+            header .container {
+                flex-direction: column;
+            }
+            header h1 {
+                margin-bottom: 10px;
+            }
+            header nav ul li {
+                display: block;
+                margin: 10px 0;
+                text-align: center;
+            }
+            .hero h2 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            section h3 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>ZapChef</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">O que é?</a></li>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#how-it-works">Como Funciona</a></li>
+                    <li><a href="#plans">Planos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <h2>Cansado de pensar no que cozinhar? O ZapChef resolve!</h2>
+            <p>Seu assistente culinário inteligente no WhatsApp: receitas personalizadas com os ingredientes que você já tem em casa. Simples, rápido e delicioso!</p>
+            <a href="#plans" class="cta-button">Quero o ZapChef Agora!</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h3>O que é o ZapChef?</h3>
+            <p style="max-width: 800px; margin: 0 auto 20px auto;">ZapChef é sua nova ferramenta secreta na cozinha! Uma inteligência artificial que funciona diretamente no seu WhatsApp, criada para quem ama cozinhar mas nem sempre tem tempo ou inspiração. Diga adeus ao "o que fazer para o jantar?" e olá para um mundo de sabores com praticidade e criatividade. Perfeito para quem está aprendendo a cozinhar ou para quem tem poucos ingredientes e quer fazer mágica!</p>
+        </div>
+    </section>
+
+    <section id="how-it-works" style="background-color: #fff;">
+        <div class="container">
+            <h3>Como Funciona o ZapChef?</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <!-- Ícone: Lista de compras ou geladeira -->
+                    <h4>1. Envie seus Ingredientes</h4>
+                    <p>Abra o WhatsApp e diga ao ZapChef quais ingredientes você tem disponíveis. Pode ser uma lista simples ou até mesmo uma foto da sua geladeira!</p>
+                </div>
+                <div class="feature-item">
+                    <!-- Ícone: Chatbot ou balão de fala -->
+                    <h4>2. Receba Sugestões Mágicas</h4>
+                    <p>Em segundos, nossa IA analisa seus ingredientes e envia sugestões de receitas deliciosas e personalizadas, desde pratos rápidos até opções mais elaboradas.</p>
+                </div>
+                <div class="feature-item">
+                    <!-- Ícone: Prato delicioso ou chapéu de chef -->
+                    <h4>3. Cozinhe e Surpreenda!</h4>
+                    <p>Escolha sua receita preferida, siga o passo a passo simplificado e prepare refeições incríveis. Cozinhar nunca foi tão fácil e divertido!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits">
+        <div class="container">
+            <h3>Por que o ZapChef vai revolucionar sua cozinha?</h3>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <!-- Ícone: Ampulheta ou relógio -->
+                    <h4>Economia de Tempo Precioso</h4>
+                    <p>Chega de perder horas navegando em busca de receitas! O ZapChef traz a inspiração até você, na palma da sua mão.</p>
+                </div>
+                <div class="benefit-item">
+                    <!-- Ícone: Cofrinho ou planta crescendo -->
+                    <h4>Menos Desperdício, Mais Economia</h4>
+                    <p>Use os ingredientes que você já tem de forma inteligente. Evite que alimentos estraguem e alivie o bolso.</p>
+                </div>
+                <div class="benefit-item">
+                    <!-- Ícone: Lâmpada ou cérebro com ideias -->
+                    <h4>Desperte sua Criatividade Culinária</h4>
+                    <p>Descubra combinações inusitadas e pratos novos. Ideal para quem está aprendendo e quer variar o cardápio.</p>
+                </div>
+                <div class="benefit-item">
+                    <!-- Ícone: Coração ou família feliz -->
+                    <h4>Para Todos os Níveis e Gostos</h4>
+                    <p>De iniciantes a cozinheiros experientes, o ZapChef adapta-se às suas habilidades e preferências alimentares.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" style="background-color: #e9f7ef;"> <!-- Um verde bem clarinho para a seção de planos -->
+        <div class="container">
+            <h3>Escolha seu Plano e Comece a Mágica!</h3>
+            <p style="margin-bottom: 40px;">Palavras chamativas e motivadoras para usar esta IA: "Liberte o chef que existe em você!", "Sua cozinha nunca mais será a mesma.", "Comida de verdade, sem complicação."</p>
+            <div class="plans-grid">
+                <div class="plan-item">
+                    <h4>Plano Básico Mensal</h4>
+                    <p>Funcionalidades essenciais para o seu dia a dia.</p>
+                    <div class="price">R$19,90<span>/mês</span></div>
+                    <ul>
+                        <li>Sugestões de receitas ilimitadas</li>
+                        <li>Baseado nos seus ingredientes</li>
+                        <li>Ideal para quem está começando</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/mMZkhz6" class="cta-button">Assinar Plano Básico</a>
+                    <p style="font-size:0.8em; margin-top:5px;">(Link para checkout Kiwify)</p>
+                </div>
+                <div class="plan-item" style="border: 2px solid #2ecc71;"> <!-- Destaque para o plano premium -->
+                    <h4>Plano Premium Anual</h4>
+                    <p>Acesso completo e para sempre, com todas as funcionalidades!</p>
+                    <div class="price">R$49,90<span>/pagamento único</span></div>
+                     <p style="font-size:0.9em; color: #e67e22; font-weight:bold;">(Oferta Especial de Lançamento!)</p>
+                    <ul>
+                        <li>Todas as funcionalidades do Básico</li>
+                        <li>Adaptação por porções</li>
+                        <li>Perfis de usuário (salve preferências)</li>
+                        <li>Histórico de receitas</li>
+                        <li>Receitas exclusivas Premium</li>
+                    </ul>
+                    <a href="https://pay.kiwify.com.br/QD5lPuQ" class="cta-button">Quero o Premium Vitalício!</a>
+                    <p style="font-size:0.8em; margin-top:5px;">(Link para checkout Kiwify)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ZapChef. Todos os direitos reservados.</p>
+            <p><a href="#" style="color: #fff; text-decoration: underline;">Política de Privacidade</a> | <a href="#" style="color: #fff; text-decoration: underline;">Termos de Uso</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
